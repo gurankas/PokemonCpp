@@ -3,13 +3,22 @@
 
 using namespace std;
 
-enum PokemonChoice
+enum class PokemonChoice
 {
     Bulbasaur,
     Charmander,
     Squirtle,
     Pikachu,
     InvalidChoice
+};
+
+enum class PokemonType
+{
+    Fire,
+    Electric,
+    Water,
+    Earth,
+    Normal
 };
 
 string player_name = "";
@@ -43,14 +52,14 @@ void ChooseYourFirstPokemon()
         {
             choseValidPokemon = true;
             cout << "You chose Bulbasaur! A wise choice.\n";
-            chosen_pokemon = Bulbasaur;
+            chosen_pokemon = PokemonChoice::Bulbasaur;
             cout << "Bulbasaur and you, " << player_name << " are going to be the best of friends\n";
             break;
         }
         case 2:
         {
             choseValidPokemon = true;
-            chosen_pokemon = Charmander;
+            chosen_pokemon = PokemonChoice::Charmander;
             cout << "You chose Charmander! A fiery choice.\n";
             cout << "Charmander and you, " << player_name << " are going to be the best of friends\n";
             break;
@@ -58,14 +67,14 @@ void ChooseYourFirstPokemon()
         case 3:
         {
             choseValidPokemon = true;
-            chosen_pokemon = Squirtle;
+            chosen_pokemon = PokemonChoice::Squirtle;
             cout << "You chose Squirtle! A cool choice.\n";
             cout << "Squirtle and you, " << player_name << " are going to be the best of friends\n";
             break;
         }
         default:
             choseValidPokemon = true;
-            chosen_pokemon = Pikachu;
+            chosen_pokemon = PokemonChoice::Pikachu;
             cout << "Since you tried something unorthodox, Professor Oak decided to give you a Pikachu!\n";
             cout << "Pikachu and you, " << player_name << " are going to be the best of friends\n";
             break;
