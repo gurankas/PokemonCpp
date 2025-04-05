@@ -3,7 +3,17 @@
 
 using namespace std;
 
+enum PokemonChoice
+{
+    Bulbasaur,
+    Charmander,
+    Squirtle,
+    Pikachu,
+    InvalidChoice
+};
+
 string player_name = "";
+PokemonChoice chosen_pokemon = PokemonChoice::InvalidChoice;
 
 int main() 
 {
@@ -33,23 +43,31 @@ void ChooseYourFirstPokemon()
         {
             choseValidPokemon = true;
             cout << "You chose Bulbasaur! A wise choice.\n";
+            chosen_pokemon = Bulbasaur;
+            cout << "Bulbasaur and you, " << player_name << " are going to be the best of friends\n";
             break;
         }
         case 2:
         {
             choseValidPokemon = true;
+            chosen_pokemon = Charmander;
             cout << "You chose Charmander! A fiery choice.\n";
+            cout << "Charmander and you, " << player_name << " are going to be the best of friends\n";
             break;
         }
         case 3:
         {
             choseValidPokemon = true;
+            chosen_pokemon = Squirtle;
             cout << "You chose Squirtle! A cool choice.\n";
+            cout << "Squirtle and you, " << player_name << " are going to be the best of friends\n";
             break;
         }
         default:
             choseValidPokemon = true;
-            cout << "Since you tried something unorthodox, Professor Oak decided to give you a Pikachu!";
+            chosen_pokemon = Pikachu;
+            cout << "Since you tried something unorthodox, Professor Oak decided to give you a Pikachu!\n";
+            cout << "Pikachu and you, " << player_name << " are going to be the best of friends\n";
             break;
         }
     }
