@@ -27,24 +27,30 @@ void ChooseYourFirstPokemon()
         cout << "Press 3 to choose Squirtle" << endl;
         cin >> chosenPokemon;
 
-        if (chosenPokemon == 1)
+        switch (chosenPokemon)
+        {
+        case 1:
         {
             choseValidPokemon = true;
             cout << "You chose Bulbasaur! A wise choice.\n";
+            break;
         }
-        else if (chosenPokemon == 2)
+        case 2:
         {
             choseValidPokemon = true;
             cout << "You chose Charmander! A fiery choice.\n";
+            break;
         }
-        else if (chosenPokemon == 3)
+        case 3:
         {
             choseValidPokemon = true;
             cout << "You chose Squirtle! A cool choice.\n";
+            break;
         }
-        else
-        {
-            cout << "That is an invalid input. Please try again!\n";
+        default:
+            choseValidPokemon = true;
+            cout << "Since you tried something unorthodox, Professor Oak decided to give you a Pikachu!";
+            break;
         }
     }
 
