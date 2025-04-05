@@ -47,6 +47,10 @@ void ChooseYourFirstPokemon()
             cout << "That is an invalid input. Please try again!\n";
         }
     }
+
+    cout << "But beware, Trainer,\nthis is only the beginning.\n"
+        << "Your journey is about to unfold.\nNow let’s see if you’ve got what it takes to keep going!\n"
+        << "Good luck, and remember… Choose wisely!\n";
 }
 
 void InputPlayerName()
